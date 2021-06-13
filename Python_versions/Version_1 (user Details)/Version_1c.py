@@ -9,7 +9,7 @@ def greet():
         print("Please enter only A-Z characters only")
 
                   
-greet()
+greet()#calling_function
 print("Hello!",name)
 #Asking user to enter their age 
 def age():
@@ -18,4 +18,4 @@ def age():
         if age.replace(' ','').isnumeric():
             break
         print("this is not a valid data type.")
-age()
+age()#calling_function
