@@ -1,4 +1,4 @@
-Q1 = 'Abdel Tasman'
+Q1 = 'Abel Tasman'
 Q2 = 'The Sperm Whale'
 
 score = 0
@@ -20,7 +20,7 @@ else:
 
 #question 2
 print("\nQuestion: 2|score:{}".format(score))
-ans=input("\nWho discovered New Zealand?\n.)Captain Cook\nb.Abdel Tasman\nc.Aunty Cindy : ")
+ans=input("\nWho discovered New Zealand?\n.)Captain Cook\nb.Abel Tasman\nc.Aunty Cindy : ")
 if ans =='B' or ans == 'b':#Checking answers
     print("Correct")
     score+=1 #adding score
