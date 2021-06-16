@@ -17,5 +17,5 @@ def age():
         age=input("How old are you? : ")#ask user to input their age
         if age.replace(' ','').isnumeric():#isnumeric is used to track errors
             break#generates error
-        print("this is not a valid data type.")
+        print("this is not a valid data type, please enter only numbers.")
 age()#calling function
