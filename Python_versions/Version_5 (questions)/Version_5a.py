@@ -2,7 +2,7 @@
 
 print("\nQuestion: 1 | score: {}".format(score))
 ans=input("who discovered New Zealand?\na.Captain Cook\nb.Abdel Tasman\nc.Aunty Cindy\n=>")
-if ans == 'Abdel Tasman' or ans == 'abdel tasman'or ans == 'B' or ans == 'b':
+if ans == 'Abel Tasman' or ans == 'abdel tasman'or ans == 'B' or ans == 'b':
     print('Correct')
     score +=1
     print("your score is",score)
