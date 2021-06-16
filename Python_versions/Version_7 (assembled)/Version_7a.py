@@ -60,7 +60,7 @@ else:
 
 #question 2
 print("\nQuestion: 2|score:{}".format(score))
-ans=input("\nWho discovered New Zealand?a)Captain Cook\nb.Abdel Tasman\nc.Aunty Cindy : ")
+ans=input("\nWho discovered New Zealand?a)Captain Cook\nb.Abel Tasman\nc.Aunty Cindy : ")
 if ans =='C' or ans == 'c':#Checking answers
     print("Correct")
     score+=1 #adding score
