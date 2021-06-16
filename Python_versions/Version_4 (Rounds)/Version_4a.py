@@ -6,12 +6,13 @@ def get_range():
         try:
             num = int(input("Please enter the amount of rounds you'd like to play : "))
             if 0<num<=5:
-                total=num
-                break
+                break  
             else:
-                print("The max is 5")
+                print("Please enter the rounds between 1-5")
         except:
-            pass
+            print('please enter rounds in numbers only (the limit is 5)')
+           
+ total=num
         
 get_range()
 
