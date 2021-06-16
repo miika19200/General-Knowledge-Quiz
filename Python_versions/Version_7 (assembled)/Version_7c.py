@@ -19,14 +19,14 @@ def age():
         age=input("How old are you? : ")
         if age.replace(' ','').isnumeric():
             break
-        print("this is not a valid data type.")
+        print("this is not a valid data type, please only enter only numbers.")
 age()
 
 print("********************Welcome to my GENERAL KNOWLEDGE QUIZ!********************")
 
 #Asking user's if they want to read instructions
 def rules():
-    rules = input("Do you want to read the rules{}:?: \na. Yes \nb. No \n=>")
+    rules = input("Do you want to read the rules{}:? If yes enter: a or Yes or yes or y, If no enter: b or No or n or N. \na. Yes \nb. No \n=>")
     if rules == 'yes' or rules == 'y' or rules == 'a':
         print("To play you will be ask how many rounds you would want to play. Once you have \nchosen your rounds (1-5) you will recive questions to answer.Every question you answer \ncorrect you will earn 1 point if you get any question incorrect you wont recive any points. Enjoy the game!")
     else:
@@ -49,13 +49,14 @@ def get_range():
     while True:
         try:
             num = int(input("Please enter the amount of rounds you'd like to play : "))
-            if 0<num<=11:
-                total=num
-                break
+            if 0<num<=5:
+                break  
             else:
-                print("The max is 11")
+                print("Please enter the rounds between 1-5")
         except:
-            pass
+            print('please enter rounds in numbers only (the limit is 5)')
+           
+ total=num
         
 get_range()
 
@@ -146,7 +147,7 @@ print("The percentage of the score you got is",round(score/total*100))
 
 #endgame_summary
 print("Well done player! You got",round(score/total*100))
-print("That's the end of the quiz, if you want to play again just restart the quiz.\nGoodbye<3")
+print("That's the end of the quiz, if you want to play again just restart the quiz.\nGoodbye.")
 
 time.sleep(8) #program pauses for 8 secs till it kills.
 exit()
