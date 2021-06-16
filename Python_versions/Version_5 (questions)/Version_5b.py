@@ -19,7 +19,7 @@ get_range()
 gkquiz=[
 [
     "\nWho discovered New Zealand?",
-    {'answer' : 'b', 'option' :'a)Captain Cook\nb.Abdel Tasman\nc.Aunty Cindy\n'}
+    {'answer' : 'b', 'option' :'a)Captain Cook\nb.Abel Tasman\nc.Aunty Cindy\n'}
     ],
 [
     "\nWhat is the loudest animal on earth",
