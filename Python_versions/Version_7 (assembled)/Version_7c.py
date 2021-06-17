@@ -19,7 +19,7 @@ def age():
         age=input("How old are you? : ")
         if age.replace(' ','').isnumeric():
             break
-        print("this is not a valid data type, please only enter only numbers.")
+        print("this is not a valid data type, please only enter numbers.")
 age()
 
 print("********************Welcome to my GENERAL KNOWLEDGE QUIZ!********************")
