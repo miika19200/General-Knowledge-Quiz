@@ -49,14 +49,14 @@ def get_range():
     while True:
         try:
             num = int(input("Please enter the amount of rounds you'd like to play : "))
-            if 0<num<=5:
+            if 0<num<=11:
                 break  
             else:
-                print("Please enter the rounds between 1-5")
+                print("Please enter the rounds between 1-11")
         except:
-            print('please enter rounds in numbers only (the limit is 5)')
+            print('please enter rounds in numbers only (the limit is 11)')
            
- total=num
+    total=num
         
 get_range()
 
@@ -150,4 +150,5 @@ print("Well done player! You got",round(score/total*100))
 print("That's the end of the quiz, if you want to play again just restart the quiz.\nGoodbye.")
 
 time.sleep(8) #program pauses for 8 secs till it kills.
+
 exit()
