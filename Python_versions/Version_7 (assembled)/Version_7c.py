@@ -1,3 +1,5 @@
+#This General Knowledge Quiz is developed by Malaika Ali
+
 from random import shuffle
 import time
 #User Details
