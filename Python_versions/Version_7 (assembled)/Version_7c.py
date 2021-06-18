@@ -1,33 +1,33 @@
 #This General Knowledge Quiz is developed by Malaika Ali
-
+#importing functions from python library  
 from random import shuffle
 import time
-#User Details
-#User name
-def greet():
+#User Details for user name input
+def greet():#using def function so i can use mutiple times without repeating
     global name
-    while True:
+    while True: #using while True loop
         name = input("What is your name? : ")
-        if name.replace(' ','').isalpha():
-            break
+        if name.replace(' ','').isalpha(): #question repeats if incorrect characters have been entered
+            break #to break the loop
         print("Please enter only A-Z characters only")
 
                   
-greet()
+greet()#calling function
 print("Hello!",name)
-#Asking user to enter their age 
-def age():
-    while True:
+
+#User Details for user age input 
+def age(): #using def function so i can use mutiple times without repeating
+    while True: #using while True loop
         age=input("How old are you? : ")
-        if age.replace(' ','').isnumeric():
-            break
+        if age.replace(' ','').isnumeric():#question repeats if incorrect characters have been entered
+            break #to break the loop
         print("this is not a valid data type, please only enter numbers.")
-age()
+age()#calling function
 
 print("********************Welcome to my GENERAL KNOWLEDGE QUIZ!********************")
 
 #Asking user's if they want to read instructions
-def rules():
+def rules():#using def function so i can use mutiple times without repeating
     rules = input("Do you want to read the rules{}:? If yes enter: a or Yes or yes or y, If no enter: b or No or n or N. \na. Yes \nb. No \n=>")
     if rules == 'yes' or rules == 'y' or rules == 'a':
         print("To play you will be ask how many rounds you would want to play. Once you have \nchosen your rounds (1-5) you will recive questions to answer.Every question you answer \ncorrect you will earn 1 point if you get any question incorrect you wont recive any points. Enjoy the game!")
@@ -35,7 +35,7 @@ def rules():
         print("You may continue without the rules.")
 
     
-rules()
+rules()#calling function
 
 #asking user if they are ready to take the quiz
 ready=input("Are you ready to take the quiz?: Press y to continue or x to exit:").lower()
@@ -46,13 +46,13 @@ else:
     exit()
 
 #asking user how many round they would like to play
-def get_range():
+def get_range():#using def function so i can use mutiple times without repeating
     global num, total
-    while True:
+    while True:#using while True loop
         try:
             num = int(input("Please enter the amount of rounds you'd like to play : "))
             if 0<num<=11:
-                break  
+                break #to break the loop
             else:
                 print("Please enter the rounds between 1-11")
         except:
@@ -60,9 +60,9 @@ def get_range():
            
     total=num
         
-get_range()
+get_range()#calling function
 
-#creating dictionary for question and the right answer
+#creating dictionary to store questions and the right answer and options
 gkquiz=[
 [
     "\nWho discovered New Zealand?",
@@ -123,7 +123,7 @@ while num>0:
     print(option)
     
 #score mechanics
-    while True:
+    while True:#using while True loop
         user_answer = input("Please enter you answer here :")
         if user_answer == 'a' or user_answer == 'b' or user_answer == 'c':
             if user_answer == answer:
@@ -140,12 +140,12 @@ while num>0:
                 print("********************************************************************************")
             del gkquiz[0]
             num-=1
-            break
+            break #to break the loop
         else:
             print("Please enter your answer in a,b,c only")
 #score mechanics
 print("You got",score,"out of",total)
-print("The percentage of the score you got is",round(score/total*100))
+print("The percentage of the score you got is",round,"%"(score/total*100))
 
 #endgame_summary
 print("Well done player! You got",round(score/total*100))
