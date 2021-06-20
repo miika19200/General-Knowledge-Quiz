@@ -1,20 +1,20 @@
+#importing functions from python library  
 from random import shuffle
 #asking user how many round they would like to play
-def get_range():
+def get_range():#using def function so i can use mutiple times without repeating
     global num, total
-    while True:
-        try:
+    while True:#using while True loop
+        try:#block of code for errors
             num = int(input("Please enter the amount of rounds you'd like to play : "))
-            if 0<num<=5:
-                break  
-            else:
-                print("Please enter the rounds between 1-5")
-        except:
-            print('please enter rounds in numbers only (the limit is 5)')
-           
- total=num
+            if 0<num<=11:
+                break #to break the loop
+            else:#invalid input
+                print("Please enter the rounds between 1-11")
+        except:#invalid input
+            print('Please enter rounds in numbers only (the limit is 11)')
+    total=num
         
-get_range()
+get_range()#calling function           
 
 #creating dictionary for question and the right answer
 gkquiz=[
@@ -56,20 +56,20 @@ while num>0:
     while True:
         user_answer = input("Please enter you answer here :")
         if user_answer == 'a' or user_answer == 'b' or user_answer == 'c':
-            if user_answer == answer:
+            if user_answer == answer:#if user inputs correct answer
                 print("**********************")
                 print("Nailed it, keep it up!")
                 print("**********************")
-                score +=1
+                score +=1#user gets 1 point if answer's correct
                 print("**********************")
-                print("Your score is", score)
+                print("Your score is", score)#prints how many user got correct
                 print("**********************")
-            else:
+            else:#if user inputs wrong answer
                 print("********************************************************************************")
                 print("Wrong! Sorry but the option you have chosen is incorrect. The right answer is",answer)
                 print("********************************************************************************")
             del gkquiz[0]
             num-=1
-            break
-        else:
+            break#breaks loop
+        else:#if user puts invalid input
             print("Please enter your answer in a,b,c only")
