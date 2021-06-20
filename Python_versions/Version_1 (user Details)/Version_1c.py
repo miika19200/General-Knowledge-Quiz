@@ -1,8 +1,8 @@
 #User Details
 #Using fuctions to greet the user
-def greet():
+def greet():#using def function so i can use mutiple times without repeating
     global name#so name outside of def can be used
-    while True:
+    while True: #using while True loop
         name = input("What is your name? : ")#ask user to input their name
         if name.replace(' ','').isalpha():#isaplha is used to track errors
             break#generates error
@@ -12,8 +12,8 @@ def greet():
 greet()#calling function
 print("Hello!",name)
 #Asking user to enter their age 
-def age():
-    while True:
+def age():#using def function so i can use mutiple times without repeating
+    while True:#using while True loop
         age=input("How old are you? : ")#ask user to input their age
         if age.replace(' ','').isnumeric():#isnumeric is used to track errors
             break#generates error
