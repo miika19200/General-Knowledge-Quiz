@@ -1,6 +1,6 @@
 #User Details
 #Using fuctions to greet the user
-def greet():#using def function so i can use mutiple times without repeating
+def greet():#using def function so i can use mutiple times without repeating the process
     global name#so name outside of def can be used
     while True: #using while True loop
         name = input("What is your name? : ")#ask user to input their name
@@ -11,9 +11,9 @@ def greet():#using def function so i can use mutiple times without repeating
 
                   
 greet()#calling function
-print("Hello!",name)
+print("Hello!",name)#printing name
 #Asking user to enter their age 
-def age():#using def function so i can use mutiple times without repeating
+def age():#using def function so i can use mutiple times without repeating the process
     while True:#using while True loop
         age=input("How old are you? : ")#ask user to input their age
         #.replace allows spaces
