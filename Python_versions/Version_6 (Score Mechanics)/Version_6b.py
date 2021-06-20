@@ -1,7 +1,7 @@
 #importing functions from python library  
 from random import shuffle
 
-#creating_dictionary to store questions and the right answer and options
+#creating_dictionary to store questions, the right answer and options
 gkquiz=[
 [
     "\nWho discovered New Zealand?",
@@ -51,7 +51,7 @@ while len(gkquiz)>0:
                 print("**********************")
                 score +=1#user earns a point
                 print("**********************")
-                print("Your score is", score)#display score points
+                print("Your score is", score)#display score 
                 print("**********************")
             else:#incorrect answer
                 print("********************************************************************************")
