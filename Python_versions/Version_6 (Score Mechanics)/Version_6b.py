@@ -57,7 +57,7 @@ while len(gkquiz)>0:
                 print("********************************************************************************")
                 print("Wrong! Sorry but the option you have chosen is incorrect. The right answer is",answer)
                 print("********************************************************************************")
-            del gkquiz[0]#user earns no points 
+            del gkquiz[0]#using del function to not repeat the questions.
             break#breaks loop
         else:#invalid input
             print("Please enter your answer in a,b,c only")
