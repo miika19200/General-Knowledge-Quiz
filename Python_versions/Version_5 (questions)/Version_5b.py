@@ -2,13 +2,14 @@
 from random import shuffle
 #asking user how many round they would like to play
 def get_range():#using def function so i can use mutiple times without repeating
-    global num, total
+    global num, total#global is used for using something outside of def
     while True:#using while True loop
         try:#block of code for errors
             num = int(input("Please enter the amount of rounds you'd like to play : "))
-            if 0<num<=5:
+            if 0<num<=5:#if function is used
                 total=num
                 break#breaks loop
+             #else function is used   
             else:#invalid input
                 print("The max is 5")
         except:#repeats if invalid input
@@ -55,22 +56,23 @@ while len(gkquiz)>0:
 #score mechanics
     while True:#using while True loop
         user_answer = input("Please enter you answer here :")
-        if user_answer == 'a' or user_answer == 'b' or user_answer == 'c':
+        if user_answer == 'a' or user_answer == 'b' or user_answer == 'c':#if fuction is used
             if user_answer == answer:#if correct answer 
                 print("**********************")
                 print("Nailed it, keep it up!")
                 print("**********************")
                 score +=1#user earns a point
                 print("**********************")
-                print("Your score is", score)#data points display
+                print("Your score is", score)#data points displayed
                 print("**********************")
             else:#if incorrect answer
                 print("********************************************************************************")
                 print("Wrong! Sorry but the option you have chosen is incorrect. The right answer is",answer)
                 print("********************************************************************************")
-            del gkquiz[0]#user doesn't earn a point
+            del gkquiz[0]#del function is used to not repeat the questions
             num-=1
             break#breaks loop
+            #else function is used
         else:#invalid input
             print("Please enter your answer in a,b,c only")
 
