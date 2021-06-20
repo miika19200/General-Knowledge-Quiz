@@ -17,7 +17,7 @@ def get_range():#using def function so i can use mutiple times without repeating
         
 get_range()#calling function           
 
-#creating dictionary for question and the right answer
+#creating list and dictionary to store questions,answers and options.
 gkquiz=[
 [
     "\nWho discovered New Zealand?",
