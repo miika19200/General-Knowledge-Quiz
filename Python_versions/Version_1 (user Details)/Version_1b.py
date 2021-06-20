@@ -10,9 +10,9 @@ def greet():#using def function so i can use mutiple times without repeating
 
                   
 greet()#calling function 
-print("Hello!",name)
+print("Hello!",name)#printing name
 #Asking user to enter their age 
-def age():#using def function so i can use mutiple times without repeating
+def age():#using def function so I can use mutiple times without repeating the process
     while True:#using while True loop
         age=input("How old are you? : ")#ask for users age
         if age.isnumeric():#isnumeric is used to trap errors
