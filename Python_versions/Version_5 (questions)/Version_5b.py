@@ -63,13 +63,13 @@ while len(gkquiz)>0:
                 print("**********************")
                 score +=1#user earns a point
                 print("**********************")
-                print("Your score is", score)#data points displayed
+                print("Your score is", score)#display points
                 print("**********************")
             else:#if incorrect answer
                 print("********************************************************************************")
                 print("Wrong! Sorry but the option you have chosen is incorrect. The right answer is",answer)
                 print("********************************************************************************")
-            del gkquiz[0]#del function is used to not repeat the questions
+            del gkquiz[0]#del questions o not repeat the questions
             num-=1
             break#breaks loop
             #else function is used
