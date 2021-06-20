@@ -1,20 +1,21 @@
+#importing functions from python library  
 from random import shuffle
 #asking user how many round they would like to play
-def rounds():
+def rounds():#using def function so i can use mutiple times without repeating
     global r, total
-    while True:
-        try:
+    while True:#using while True loop
+        try:#blocks code for errors
             r = int(input("Please enter the amount of rounds you'd like to play : "))
             if 0<r<=5: #allowing only to answer 5 questions nothing over or below
                 total=num
-                break
-            else:
+                break#breaks loop
+            else:#invalid input
                 print("The max is 5")
-        except:
+        except:#invalid input 
             print("Please eneter only numbers 1-5")
         
-rounds()
-#creating_dictionary_for_question_and_the_right_answer
+rounds()#calling function
+#creating dictionary to store questions and the right answer and options 
 gkquiz=[
 [
     "\nWho discovered New Zealand?",
@@ -37,9 +38,9 @@ gkquiz=[
     {'answer' : 'c', 'option' :'a)1\nb)2\nc)3\n'}
     ],
 ]
-shuffle(gkquiz)
+shuffle(gkquiz)#randomize questions
 
-score = 0
+score = 0#starting score
 while num>0:
     data = gkquiz[0]
     q=data[0]
@@ -55,30 +56,32 @@ while num>0:
 #score_mechanics
 
 
-    while True:
+    while True:#using while True loop
         user_answer = input("Please enter you answer here :")
         if user_answer == 'a' or user_answer == 'b' or user_answer == 'c':
-            if user_answer == answer:
+            if user_answer == answer:#correct answer
                 print("**********************")
                 print("Nailed it, keep it up!")
                 print("**********************")
-                score +=1
+                score +=1#user earns a point
                 print("**********************")
-                print("Your score is", score)
+                print("Your score is", score)#display data points 
                 print("**********************")
-            else:
+            else:#incorrect answer
                 print("********************************************************************************")
                 print("Wrong! Sorry but the option you have chosen is incorrect. The right answer is",answer)
                 print("********************************************************************************")
-            del gkquiz[0]
-            break
-        else:
+            del gkquiz[0]#user earns no points
+            break#breaks loop
+        else:#invalid input
             print("Please enter your answer in a,b,c only")
-#presenting_score_to_players
+#score mechanics
 print("You got",score,"out of",total)
+print("The percentage of the score you got is",round,"%"(score/total*100))#presents precentage score
+
 #endgame_summary
-print("Well done player! You got",round(score/total*100))
-print("That's the end of the quiz, if you want to play again just restart the quiz.\nGoodbye<3")
+print("Well done player! You got",round(score/total*100))#presents total score
+print("That's the end of the quiz, if you want to play again just restart the quiz.\nGoodbye.")
 
 time.sleep(8) #program pauses for 8 secs till it kills.
-exit()
+exit()#exits program
