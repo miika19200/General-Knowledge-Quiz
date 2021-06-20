@@ -4,7 +4,7 @@ from random import shuffle
 def get_range():#using def function so i can use mutiple times without repeating
     global num, total
     while True:#using while True loop
-        try:#block of code for errors
+        try:#blocks code for errors
             num = int(input("Please enter the amount of rounds you'd like to play : "))
             if 0<num<=11:
                 break #to break the loop
@@ -39,9 +39,9 @@ gkquiz=[
     {'answer' : 'c', 'option' :'a)1\nb)2\nc)3\n'}
     ],
 ]
-shuffle(gkquiz)
+shuffle(gkquiz)#randomize questions
 
-score = 0
+score = 0#starting score
 while num>0:
     data = gkquiz[0]
     q=data[0]
@@ -53,7 +53,7 @@ while num>0:
     print(option)
 
 #score mechanics
-    while True:
+    while True:#using while True loop
         user_answer = input("Please enter you answer here :")
         if user_answer == 'a' or user_answer == 'b' or user_answer == 'c':
             if user_answer == answer:#if user inputs correct answer
