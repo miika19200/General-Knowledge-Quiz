@@ -1,5 +1,5 @@
 #Asking user's if they want to read instructions
-def rules():#using def function so i can use mutiple times without repeating
+def rules():#using def function so i can use mutiple times without repeating the process
     rules = input("Do you want to read the rules{}:?: if yes enter: a or Yes or yes or y,if no enter: b or No or n or N.  \na. Yes \nb. No \n=>")#ask user if they want to read rules or not
     #using if function
     if rules == 'yes' or rules == 'y' or rules == 'a' or rules == 'YeS':#if user inputs yes, y, YeS or a program prints rules
