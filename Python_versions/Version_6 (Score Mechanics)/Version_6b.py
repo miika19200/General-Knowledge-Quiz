@@ -1,6 +1,7 @@
+#importing functions from python library  
 from random import shuffle
 
-#creating_dictionary_for_question_and_the_right_answer
+#creating_dictionary to store questions and the right answer and options
 gkquiz=[
 [
     "\nWho discovered New Zealand?",
@@ -23,9 +24,9 @@ gkquiz=[
     {'answer' : 'c', 'option' :'a)1\nb)2\nc)3\n'}
     ],
 ]
-shuffle(gkquiz)
+shuffle(gkquiz)#randomize questions 
 
-score = 0
+score = 0#starting score
 while len(gkquiz)>0:
     data = gkquiz[0]
     q=data[0]
@@ -41,25 +42,25 @@ while len(gkquiz)>0:
 #score_mechanics
 
 
-    while True:
+    while True:#using while True loop
         user_answer = input("Please enter you answer here :")
         if user_answer == 'a' or user_answer == 'b' or user_answer == 'c':
-            if user_answer == answer:
+            if user_answer == answer:#correct answer
                 print("**********************")
                 print("Nailed it, keep it up!")
                 print("**********************")
-                score +=1
+                score +=1#user earns a point
                 print("**********************")
-                print("Your score is", score)
+                print("Your score is", score)#display score points
                 print("**********************")
-            else:
+            else:#incorrect answer
                 print("********************************************************************************")
                 print("Wrong! Sorry but the option you have chosen is incorrect. The right answer is",answer)
                 print("********************************************************************************")
-            del gkquiz[0]
-            break
-        else:
+            del gkquiz[0]#user earns no points 
+            break#breaks loop
+        else:#invalid input
             print("Please enter your answer in a,b,c only")
-print("You got",score,"out of 5")
+print("You got",score,"out of 5")#display endgame summary  
 print("The percentage of the score you got is",round(score/5*100),"%")
 
