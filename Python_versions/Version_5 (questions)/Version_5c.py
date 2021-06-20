@@ -63,7 +63,7 @@ while True:#using while True loop
                     print("**********************")
                     score +=1#user earns a point
                     print("**********************")
-                    print("Your score is", score)#data display of users points
+                    print("Your score is", score)#display of users points
                     print("**********************")
                 else:#if user inputs incorrect answer
                     print("********************************************************************************")
