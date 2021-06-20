@@ -5,7 +5,7 @@ ans=input("who discovered New Zealand?\na.Captain Cook\nb.Abel Tasman\nc.Aunty C
 if ans == 'Abel Tasman' or ans == 'abel tasman'or ans == 'B' or ans == 'b':#correct answer 
     print('Correct')
     score +=1#user gets 1 point
-    print("your score is",score)#display data points
+    print("your score is",score)#display points
 
 else:#incorrect answer 
     print('incorrect')
@@ -17,7 +17,7 @@ else:#incorrect answer
 #question 2
 
 
-    print("\nQuestion: 2 | score: {}".format(score))#data display
+    print("\nQuestion: 2 | score: {}".format(score))#display score
     ans=input("What is the loudest animal on Earth?\na.The Sperm Whale\nb.Lion\nc.blue Whale\n=>")#questions and options
     if ans == 'The Sperm Whale' or ans == 'the sperm whale'or ans == 'a' or ans == 'A':#correct answer
         print('Correct')
