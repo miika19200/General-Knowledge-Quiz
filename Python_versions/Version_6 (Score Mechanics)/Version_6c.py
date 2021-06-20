@@ -140,7 +140,7 @@ while num>0:
                 print("********************************************************************************")
                 print("Wrong! Sorry but the option you have chosen is incorrect. The right answer is",answer)
                 print("********************************************************************************")
-            del gkquiz[0]
+            del gkquiz[0]#using del function to not repeat the questions.
             num-=1
             break #to break the loop
         else:
