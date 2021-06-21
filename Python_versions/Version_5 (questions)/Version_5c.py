@@ -69,7 +69,7 @@ while True:#using while True loop
                     print("********************************************************************************")
                     print("Wrong! Sorry but the option you have chosen is incorrect. The right answer is",answer)
                     print("********************************************************************************")
-                del gkquiz[0]#user earns no points
+                del gkquiz[0]
                 num-=1
                 break#breaks loop
             else:#invalid input
