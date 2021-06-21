@@ -4,16 +4,16 @@ from random import shuffle
 import time
 #User Details for user name input
 def greet():#using def function so i can use mutiple times without repeating
-    global name
+    global name#allows us to use name outside of def
     while True: #using while True loop
         name = input("What is your name? : ")
-        if name.replace(' ','').isalpha(): #question repeats if incorrect characters have been entered
+        if name.replace(' ','').isalpha(): #.replace allows space
             break #to break the loop
         print("Please enter only A-Z characters only")
 
                   
 greet()#calling function
-print("Hello!",name)
+print("Hello!",name)#printning name
 
 #User Details for user age input 
 def age(): #using def function so i can use mutiple times without repeating
@@ -29,35 +29,36 @@ print("********************Welcome to my GENERAL KNOWLEDGE QUIZ!****************
 #Asking user's if they want to read instructions
 def rules():#using def function so i can use mutiple times without repeating
     rules = input("Do you want to read the rules{}:? If yes enter: a or Yes or yes or y, If no enter: b or No or n or N. \na. Yes \nb. No \n=>")
-    if rules == 'yes' or rules == 'y' or rules == 'a':#prints rules
+    if rules == 'yes' or rules == 'y' or rules == 'a':#using if function
+        #prints rules
         print("To play you will be ask how many rounds you would want to play. Once you have \nchosen your rounds (1-5) you will recive questions to answer.Every question you answer \ncorrect you will earn 1 point if you get any question incorrect you wont recive any points. Enjoy the game!")
-    else:#continues program
+    else:#using else function
         print("You may continue without the rules.")
 
     
 rules()#calling function
 
 #asking user if they are ready to take the quiz
-def status():#using def function so i can use mutiple times without repeating
+def status():#using def function so i can use mutiple times without repeating the process
     ready=input("Are you ready to take the quiz?: Press y to continue or any other key to exit:").lower()#.lower is used to make capital into lowercase
-    if ready == "y" or ready == "yes" :#program continues 
+    if ready == "y" or ready == "yes" :#using if function
         print("Let's continue!")  
-    else:#ends program 
+    else:#using else function
         print("See you later!")
         exit()#exits program
 status()#calling function 
 
 #asking user how many round they would like to play
 def get_range():#using def function so i can use mutiple times without repeating
-    global num, total
+    global num, total#allows us to use name outside of def
     while True:#using while True loop
-        try:
+        try:#using try function
             num = int(input("Please enter the amount of rounds you'd like to play : "))
-            if 0<num<=11:
+            if 0<num<=11:#using if function
                 break #to break the loop
-            else:
+            else:#using else function
                 print("Please enter the rounds between 1-11")
-        except:
+        except:#using except function
             print('please enter rounds in numbers only (the limit is 11)')
            
     total=num
@@ -113,7 +114,7 @@ gkquiz=[
 ]
 shuffle(gkquiz)
 
-score = 0
+score = 0#starting score
 while num>0:
     data = gkquiz[0]
     q=data[0]
@@ -127,31 +128,31 @@ while num>0:
 #score mechanics
     while True:#using while True loop
         user_answer = input("Please enter you answer here :")
-        if user_answer == 'a' or user_answer == 'b' or user_answer == 'c':
-            if user_answer == answer:
+        if user_answer == 'a' or user_answer == 'b' or user_answer == 'c':#using if function
+            if user_answer == answer:#using if function
                 print("**********************")
                 print("Nailed it, keep it up!")
                 print("**********************")
-                score +=1
+                score +=1#user earns a point
                 print("**********************")
-                print("Your score is", score)
+                print("Your score is", score)#prints users score
                 print("**********************")
-            else:
+            else:#using else function
                 print("********************************************************************************")
                 print("Wrong! Sorry but the option you have chosen is incorrect. The right answer is",answer)
                 print("********************************************************************************")
-            del gkquiz[0]
+            del gkquiz[0]##using del function to not repeat the questions.
             num-=1
             break #to break the loop
         else:
             print("Please enter your answer in a,b,c only")
 #score mechanics
-print("You got",score,"out of",total)
-print("The percentage of the score you got is",round,"%"(score/total*100))
+print("You got",score,"out of",total)#printing final score
+print("The percentage of the score you got is",round,"%"(score/total*100))#printing final score with percentage
 
 #endgame_summary
-print("Well done player! You got",round(score/total*100))
-print("That's the end of the quiz, if you want to play again just restart the quiz.\nGoodbye.")
+print("Well done player! You got",round(score/total*100))#printing final score with percentage
+print("That's the end of the quiz, if you want to play again just restart the quiz.\nGoodbye.")#endgame summary 
 
 time.sleep(8) #program pauses for 8 secs till it kills.
 
