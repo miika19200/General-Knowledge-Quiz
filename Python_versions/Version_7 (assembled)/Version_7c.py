@@ -7,19 +7,19 @@ def greet():#using def function so i can use mutiple times without repeating
     global name#allows us to use name outside of def
     while True: #using while True loop
         name = input("What is your name? : ")
-        if name.replace(' ','').isalpha(): #.replace allows space
+        if name.replace(' ','').isalpha(): #.replace() allows space, using .isalpha() to trap errors
             break #to break the loop
-        print("Please enter only A-Z characters only")
-
-                  
+        print("Please enter only A-Z characters only")                
 greet()#calling function
+
 print("Hello!",name)#printning name
+
 
 #User Details for user age input 
 def age(): #using def function so i can use mutiple times without repeating
     while True: #using while True loop
         age=input("How old are you? : ")
-        if age.replace(' ','').isnumeric():#question repeats if incorrect characters have been entered
+        if age.replace(' ','').isnumeric():#question repeats if incorrect characters have been entered, using .isnumeric() to trap errors
             break #to break the loop
         print("this is not a valid data type, please only enter numbers.")
 age()#calling function
@@ -112,9 +112,9 @@ gkquiz=[
     {'answer' : 'c', 'option' :'aThe Three Caballeros(1944)\nb.Make Mine Music(1946)\nc.Snow White(1937)\n'}
     ],
 ]
-shuffle(gkquiz)
+shuffle(gkquiz)#Shuffling the questions
 
-score = 0#starting score
+score = 0 #starting score
 while num>0:
     data = gkquiz[0]
     q=data[0]
@@ -122,12 +122,12 @@ while num>0:
     answer = data['answer']
     option = data['option']
 
-    print(q)
-    print(option)
+    print(q)#printing questions
+    print(option)#printing options
     
 #score mechanics
     while True:#using while True loop
-        user_answer = input("Please enter you answer here :")
+        user_answer = input("Please enter you answer here : ")
         if user_answer == 'a' or user_answer == 'b' or user_answer == 'c':#using if function
             if user_answer == answer:#using if function
                 print("**********************")
@@ -141,7 +141,7 @@ while num>0:
                 print("********************************************************************************")
                 print("Wrong! Sorry but the option you have chosen is incorrect. The right answer is",answer)
                 print("********************************************************************************")
-            del gkquiz[0]##using del function to not repeat the questions.
+            del gkquiz[0] #using del function to not repeat the questions.
             num-=1
             break #to break the loop
         else:
@@ -151,9 +151,9 @@ print("You got",score,"out of",total)#printing final score
 print("The percentage of the score you got is",round,"%"(score/total*100))#printing final score with percentage
 
 #endgame_summary
-print("Well done player! You got",round(score/total*100))#printing final score with percentage
-print("That's the end of the quiz, if you want to play again just restart the quiz.\nGoodbye.")#endgame summary 
+print("Well done player! You got",round(score/total*100)) #printing final score with percentage
+print("That's the end of the quiz, if you want to play again just restart the quiz.\nGoodbye.") #endgame summary 
 
 time.sleep(8) #program pauses for 8 secs till it kills.
 
-exit()
+exit() #Exits the program
