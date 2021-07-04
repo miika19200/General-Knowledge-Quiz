@@ -5,7 +5,7 @@ def get_range():#using def function so i can use mutiple times without repeating
     global num, total
     while True:#using while True loop
         try:#blocks code for errors
-            num = int(input("Please enter the amount of rounds you'd like to play : "))
+            num = int(input("Please enter the amount of rounds you'd like to play rounds between 1-5 : "))
             if 0<num<=5:
                 total=num
                 break#breaks loop
