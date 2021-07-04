@@ -148,10 +148,9 @@ while num>0:
             print("Please enter your answer in a,b,c only")
 #score mechanics
 print("You got",score,"out of",total)#printing final score
-print("The percentage of the score you got is",round,"%"(score/total*100))#printing final score with percentage
 
 #endgame_summary
-print("Well done player! You got",round(score/total*100)) #printing final score with percentage
+print("Well done player! You got",round(score/total*100,2),"%") #printing final score with percentage
 print("That's the end of the quiz, if you want to play again just restart the quiz.\nGoodbye.") #endgame summary 
 
 time.sleep(8) #program pauses for 8 secs till it kills.
