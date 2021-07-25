@@ -2,6 +2,7 @@
 #importing functions from python library  
 from random import shuffle
 import time
+
 #User Details for user name input
 def greet():#using def function so i can use mutiple times without repeating
     global name#allows us to use name outside of def
@@ -39,12 +40,13 @@ def rules():#using def function so i can use mutiple times without repeating
 rules()#calling function
 
 #asking user if they are ready to take the quiz
+print("================= READY TO START? ================= ")
 def status():#using def function so i can use mutiple times without repeating the process
     ready=input("Are you ready to take the quiz?: Press y to continue or any other key to exit:").lower()#.lower is used to make capital into lowercase
     if ready == "y" or ready == "yes" :#using if function
-        print("Let's continue!")  
+        print("******************** LETS CONTINUE! ********************") 
     else:#using else function
-        print("See you later!")
+        print("******************** See you later! ********************")
         exit()#exits program
 status()#calling function 
 
@@ -151,7 +153,7 @@ print("You got",score,"out of",total)#printing final score
 
 #endgame_summary
 print("Well done player! You got",round(score/total*100,2),"%") #printing final score with percentage
-print("That's the end of the quiz, if you want to play again just restart the quiz.\nGoodbye.") #endgame summary 
+print("That's the end of the quiz, if you want to play again just restart the quiz.\nGoodbye!") #endgame summary 
 
 time.sleep(8) #program pauses for 8 secs till it kills.
 
