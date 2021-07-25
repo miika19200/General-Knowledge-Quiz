@@ -3,70 +3,6 @@
 from random import shuffle
 import time
 
-#User Details for user name input
-def greet():#using def function so i can use mutiple times without repeating
-    global name#allows us to use name outside of def
-    while True: #using while True loop
-        name = input("What is your name? : ")
-        if name.replace(' ','').isalpha(): #.replace() allows space, using .isalpha() to trap errors
-            break #to break the loop
-        print("Please enter only A-Z characters only")                
-greet()#calling function
-
-print("Hello!",name)#printning name
-
-
-#User Details for user age input 
-def age(): #using def function so i can use mutiple times without repeating
-    while True: #using while True loop
-        age=input("How old are you? : ")
-        if age.replace(' ','').isnumeric():#question repeats if incorrect characters have been entered, using .isnumeric() to trap errors
-            break #to break the loop
-        print("this is not a valid data type, please only enter numbers.")
-age()#calling function
-
-print("********************Welcome to my GENERAL KNOWLEDGE QUIZ!********************")
-
-#Asking user's if they want to read instructions
-def rules():#using def function so i can use mutiple times without repeating
-    rules = input("Do you want to read the rules{}:? If yes enter: a or Yes or yes or y, If no enter: b or No or n or N. \na. Yes \nb. No \n=>")
-    if rules == 'yes' or rules == 'y' or rules == 'a':#using if function
-        #prints rules
-        print("To play you will be ask how many rounds you would want to play. Once you have \nchosen your rounds (1-5) you will recive questions to answer.Every question you answer \ncorrect you will earn 1 point if you get any question incorrect you wont recive any points. Enjoy the game!")
-    else:#using else function
-        print("You may continue without the rules.")
-
-    
-rules()#calling function
-
-#asking user if they are ready to take the quiz
-print("================= READY TO START? ================= ")
-def status():#using def function so i can use mutiple times without repeating the process
-    ready=input("Are you ready to take the quiz?: Press y to continue or any other key to exit:").lower()#.lower is used to make capital into lowercase
-    if ready == "y" or ready == "yes" :#using if function
-        print("******************** LETS CONTINUE! ********************") 
-    else:#using else function
-        print("******************** See you later! ********************")
-        exit()#exits program
-status()#calling function 
-
-#asking user how many round they would like to play
-def get_range():#using def function so i can use mutiple times without repeating
-    global num, total#allows us to use name outside of def
-    while True:#using while True loop
-        try:#using try function
-            num = int(input("Please enter the amount of rounds you'd like to play rounds between 1-11: "))
-            if 0<num<=11:#using if function
-                break #to break the loop
-            else:#using else function
-                print("Please enter the rounds between 1-11")
-        except:#using except function
-            print('please enter rounds in numbers only (the limit is 11)')
-           
-    total=num
-        
-get_range()#calling function
-
 #creating dictionary to store questions and the right answer and options
 gkquiz=[
 [
@@ -114,9 +50,75 @@ gkquiz=[
     {'answer' : 'c', 'option' :'aThe Three Caballeros(1944)\nb.Make Mine Music(1946)\nc.Snow White(1937)\n'}
     ],
 ]
+score = 0 #starting score
+
+
+#User Details for user name input
+def greet():#using def function so i can use mutiple times without repeating
+    global name#allows us to use name outside of def
+    while True: #using while True loop
+        name = input("What is your name? : ")
+        if name.replace(' ','').isalpha(): #.replace() allows space, using .isalpha() to trap errors
+            break #to break the loop
+        print("Please enter only A-Z characters only")                
+
+
+#User Details for user age input 
+def age(): #using def function so i can use mutiple times without repeating
+    while True: #using while True loop
+        age=input("How old are you? : ")
+        if age.replace(' ','').isnumeric():#question repeats if incorrect characters have been entered, using .isnumeric() to trap errors
+            break #to break the loop
+        print("this is not a valid data type, please only enter numbers.")
+
+
+#Asking user's if they want to read instructions
+def rules():#using def function so i can use mutiple times without repeating
+    rules = input("Do you want to read the rules{}:? If yes enter: a or Yes or yes or y, If no enter: b or No or n or N. \na. Yes \nb. No \n=>")
+    if rules == 'yes' or rules == 'y' or rules == 'a':#using if function
+        #prints rules
+        print("To play you will be ask how many rounds you would want to play. Once you have \nchosen your rounds (1-5) you will recive questions to answer.Every question you answer \ncorrect you will earn 1 point if you get any question incorrect you wont recive any points. Enjoy the game!")
+    else:#using else function
+        print("You may continue without the rules.")
+
+def status():#using def function so i can use mutiple times without repeating the process
+    ready=input("Are you ready to take the quiz?: Press y to continue or any other key to exit:").lower()#.lower is used to make capital into lowercase
+    if ready == "y" or ready == "yes" :#using if function
+        print("******************** LETS CONTINUE! ********************") 
+    else:#using else function
+        print("******************** See you later! ********************")
+        exit()#exits program
+
+#asking user how many round they would like to play
+def get_range():#using def function so i can use mutiple times without repeating
+    global num, total#allows us to use name outside of def
+    while True:#using while True loop
+        try:#using try function
+            num = int(input("Please enter the amount of rounds you'd like to play rounds between 1-11: "))
+            if 0<num<=11:#using if function
+                break #to break the loop
+            else:#using else function
+                print("Please enter the rounds between 1-11")
+        except:#using except function
+            print('please enter rounds in numbers only (the limit is 11)')
+           
+    total=num
+
+    
+#program starts        
+greet()#calling function
+print("Hello!",name)#printing name
+age()#calling function
+print("********************Welcome to my GENERAL KNOWLEDGE QUIZ!********************"  )  
+rules()#calling function
+#asking user if they are ready to take the quiz
+print("================= READY TO START? ================= ")
+status()#calling function 
+        
+get_range()#calling function
+
 shuffle(gkquiz)#Shuffling the questions
 
-score = 0 #starting score
 while num>0:
     data = gkquiz[0]
     q=data[0]
